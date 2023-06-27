@@ -397,7 +397,6 @@ async function verifyAndFinalizeCampaign(campaign) {
 
   const io = getIO();
   io.emit(`company-${campaign.companyId}-campaign`, {
-    ,
     record: campaign
   });
 }
@@ -580,7 +579,7 @@ async function handleDispatchCampaign(job) {
   } catch (err: any) {
     Sentry.captureException(err);
     logger.error(err.message);
-    err.stack);
+    err.stack;
   }
 }
 
